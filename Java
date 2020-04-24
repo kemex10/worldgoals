@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleri</title>
+<style>
+img{
+width: 15%;
+padding: 5px;
+bottom: 100px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+</style>
+</head>
+<body>
+    <body>
+        
+        <div class="navbar">
+            <nav id="demo"></nav>
+            <ul>
+                <li><a class="active" href="#Forside">Forside</a></li>
+                <li><a href="#Produkter">Produkter</a></li>
+                <li><a href="#Forhandlere">Forhandlere</a></li>
+                <li><a href="#Om os">Om os</a></li>
+                <li><a href="#kontakt">kontakt</a></li>
+              </ul> 
+        </div>
+            
+            </div> 
+            
+            <div id="imglist">
+            <a href="#Goal-No-Poverty"><img src="img/Goal-No-Poverty.png" alt=""></a>
+            <a href="#Goal-No-Hunger)"><img src="img/Goal-No-Hunger.png" alt=""></a>
+            <a href="#Goal-Good-Health"><img src="img/Goal-Good-Health.png" alt=""></a>
+            <a href="#Goal-Good-Education"><img src="img/Goal-Good-Education.png" alt=""></a>
+            <a href="#Goal-Gender-Equality"><img src="img/Goal-Gender-Equality.png" alt=""></a>
+            <a href="#Goal-Clean-Water"><img src="img/Goal-Clean-Water.png" alt=""></a>
+            <a href="#Goal-Clean-Energy"><img src="img/Goal-Clean-Energy.png" alt=""></a>
+            <a href="#Goal-Decent-Work"><img src="img/Goal-Decent-Work.png" alt=""></a>
+            <a href="#Goal-Industry"><img src="img/Goal-Industry.png" alt=""></a>
+            <a href="#Goal-Inequalities"><img src="img/Goal-Inequalities.png" alt=""></a>
+            <a href="#Goal-Sustainable-Cities"><img src="img/Goal-Sustainable-Cities.png" alt=""></a>
+            <a href="#Goal-Responsible-Consumption"><img src="img/Goal-Responsible-Consumption.png" alt=""></a>
+            <a href="#Goal-Climate-Action"><img src="img/Goal-Climate-Action.png" alt=""></a>
+            <a href="#Goal-Life-Water"><img src="img/Goal-Life-Water.png" alt=""></a>
+            <a href="#Goal-Life-Land"><img src="img/Goal-Life-Land.png" alt=""></a>
+            <a href="#Goal-Institutions"><img src="img/Goal-Institutions.png" alt=""></a>
+            <a href="#Goal-Partnership"><img src="img/Goal-Partnership.png" alt=""></a>
+
+
+    <script>
+var imgArray = new Array();
+
+imgArray[0] = new Image();
+imgArray[0].src = 'img\Goal-No-Poverty.png';
+
+imgArray[1] = new Image();
+imgArray[1].src = 'img/Goal-No-Hunger.png';
+
+imgArray[2] = new Image();
+imgArray[2].src = 'img/Goal-Good-Education.png';
+
+imgArray[3] = new Image();
+imgArray[3].src = 'img/Goal-Gender-Equality.png';
+
+imgArray[4] = new Image();
+imgArray[4].src = 'img/Goal-Clean-Water.png';
+
+imgArray[5] = new Image();
+imgArray[5].src = 'img/Goal-Clean-Energy.png';
+
+imgArray[6] = new Image();
+imgArray[6].src = 'img/Goal-Decent-Work.png';
+
+imgArray[7] = new Image();
+imgArray[7].src = 'img/Goal-Industry.png';
+
+imgArray[8] = new Image();
+imgArray[8].src = 'img/Goal-Inequalities.png';
+
+imgArray[9] = new Image();
+imgArray[9].src = 'img/Goal-Sustainable-Cities.png';
+
+imgArray[10] = new Image();
+imgArray[10].src = 'img/Goal-Responsible-Consumption.png';
+
+imgArray[11] = new Image();
+imgArray[11].src = 'img/Goal-Climate-Action.png';
+
+imgArray[12] = new Image();
+imgArray[12].src = 'img/Goal-Life-Water.png';
+
+imgArray[13] = new Image();
+imgArray[13].src = 'img/Goal-Life-Land.png';
+
+imgArray[14] = new Image();
+imgArray[14].src = 'img/Goal-Institutions.png';
+
+imgArray[15] = new Image();
+imgArray[15].src = 'img/Goal-Partnership.png';
+console.dir(imgArray)
+
+function nextImage(element)
+{
+    var img = document.getElementById(element);
+
+    for(var i = 0;i<imgArray.length;i++)
+    {
+        if(imgArray[i] == img)
+        {
+            if(i == imgArray.length)
+            {
+                var j = 0;
+                document.getElementById(element).src = imgArray[j].src;
+                break;
+            }
+            else
+            var j = i + 1;
+            document.getElementById(element).src = imgArray[j].src;
+            break;
+        }
+    }   
+}
+</script>
+<script>
+    let navbar = [
+        ["Forside", "home"],
+        ["Produkter", "products"],
+        ["Forhandlere", "merchants"],
+        ["Partnere", "partners"],
+        ["Om os", "about_us"],
+        ["Kontakt", "contact"]
+    ];
+    console.dir(navbar)
+    let item;
+    let arrHtml = "<ul>";
+    for(item of navbar) {
+        arrHtml += <li><a href="#${item[1]}">${item[0]}</a></li>
+    }
+    arrHtml += "</ul>";
+    document.getElementById('demo').innerHTML = arrHtml;
+</script>
+
+
+                
+</body>
+</html>
